@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_teacher_list_item"
+    android:layout_marginBottom="20dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/layout_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|top"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_launcher_background" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:gravity="left|top"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:padding="6dp"
+                android:background="@color/orange_900"
+                android:id="@+id/tv_curriculum_request"
+                android:text="(학생) 커리큘럼 신청"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textSize="18sp"
+                android:id="@+id/tv_user_name"
+                android:layout_marginTop="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:maxLines="1"
+                android:text="권민성(학생)" />
+            <TextView
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:id="@+id/tv_title"
+                android:layout_marginTop="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:maxLines="1"
+                android:text="피아노 하울의 움직이는 성 마스터 가나다라마바사아자차카타파하" />
+
+
+
+            <TextView
+                android:textSize="18sp"
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:maxLines="1"
+                android:text="마지막 메시지..." />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

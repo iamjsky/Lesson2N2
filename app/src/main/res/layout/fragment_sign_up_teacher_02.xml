@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="kr.co.soundleader.android.lesson2n2.ui.sign.viewmodel.SignUpTeacherSharedViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:background="@color/default_page_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_login"
+          >
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="상세 이력"
+                    android:textColor="@color/DimGray"
+                    android:textSize="16sp" />
+
+
+                <EditText
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:lineSpacingExtra="2dp"
+                    android:hint="# 학력 : \n# 경력 : \n# 분야 : 피아노\n# 소개 : 안녕하세요."
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text_01"
+                    android:gravity="top|start"
+                    android:padding="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_marginEnd="10dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <CheckBox
+                            android:checked="false"
+                            android:text="(필수) 이용약관에 동의합니다."
+                            android:gravity="center|start"
+                            android:paddingLeft="20dp"
+                            android:button="@null"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@drawable/selector_radio_text_user_type"
+                            android:background="@drawable/selector_radio_button_user_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"/>
+                        <CheckBox
+                            android:checked="false"
+                            android:layout_marginTop="10dp"
+                            android:text="(필수) 개인정보 수집 및 이용에 동의합니다."
+                            android:gravity="center|start"
+                            android:paddingLeft="20dp"
+                            android:button="@null"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@drawable/selector_radio_text_user_type"
+                            android:background="@drawable/selector_radio_button_user_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"/>
+                        <CheckBox
+                            android:checked="false"
+                            android:layout_marginTop="10dp"
+                            android:text="(필수) 14세 이상입니다."
+                            android:gravity="center|start"
+                            android:paddingLeft="20dp"
+                            android:button="@null"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@drawable/selector_radio_text_user_type"
+                            android:background="@drawable/selector_radio_button_user_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:id="@+id/btn_term_of_use"
+                            android:paddingStart="30dp"
+                            android:paddingEnd="30dp"
+
+                            android:gravity="center"
+                            android:textSize="18sp"
+                            android:textColor="@color/white"
+                            android:background="@color/RoyalBlue"
+                            android:text="원문 확인"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"/>
+                        <Button
+                            android:id="@+id/btn_privacy"
+                            android:paddingStart="30dp"
+                            android:paddingEnd="30dp"
+
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:textSize="18sp"
+                            android:textColor="@color/white"
+                            android:background="@color/RoyalBlue"
+                            android:text="원문 확인"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"/>
+
+                        <View
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/RoyalBlue"
+            android:text="회원 등록"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="kr.co.soundleader.android.lesson2n2.ui.curriculum.viewmodel.CurriculumAddViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/default_page_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <include
+
+            android:id="@+id/nav_top_menu"
+            layout="@layout/top_menu" />
+
+        <FrameLayout
+
+            android:id="@+id/layout_body"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nav_top_menu" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

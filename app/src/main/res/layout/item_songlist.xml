@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    >
+
+
+
+    <ImageView
+        android:background="@color/skeleton_color_01"
+        android:id="@+id/iv_songCover"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textStyle="bold"
+        android:gravity="center|start"
+        android:text="노래 제목"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/tv_songTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_songCover"
+        app:layout_constraintTop_toTopOf="@+id/iv_songCover" />
+
+    <TextView
+        android:id="@+id/tv_songArtist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center|start"
+        android:text="가수"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_songTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_songTitle" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_skeleton"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <ImageView
+
+            android:background="@color/skeleton_color_01"
+            android:id="@+id/iv_ske_songCover"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:background="@color/skeleton_color_01"
+            android:textStyle="bold"
+            android:gravity="center|start"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:id="@+id/tv_ske_songTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_ske_songCover"
+            app:layout_constraintTop_toTopOf="@+id/iv_ske_songCover" />
+
+        <TextView
+            android:background="@color/skeleton_color_01"
+            android:id="@+id/tv_ske_songArtist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center|start"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_ske_songTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tv_ske_songTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

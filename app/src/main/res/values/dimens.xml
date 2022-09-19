@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="menu_height">60dp</dimen>
+    <dimen name="top_menu_height">60dp</dimen>
+    <dimen name="top_menu_title_text_size">20sp</dimen>
+    <dimen name="bottom_menu_text_size">12sp</dimen>
+    <dimen name="default_button_text_size">20sp</dimen>
+
+
+</resources>

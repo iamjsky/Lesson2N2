@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="kr.co.soundleader.android.lesson2n2.ui.mypage.viewmodel.MyPageCurriculumModifyTeacherSharedViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:background="@color/default_page_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+   >
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_next">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                android:padding="20dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="커리큘럼 제목"
+                    android:textColor="@color/DimGray"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text_01"
+                    android:gravity="center|start"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:text="레슨 비용"
+                            android:textColor="@color/DimGray"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:maxLines="1"
+                            android:inputType="number"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_edit_text_01"
+                            android:gravity="center|start"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:text="레슨 횟수/시간"
+                            android:textColor="@color/DimGray"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:maxLines="1"
+                            android:inputType="number"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_edit_text_01"
+                            android:gravity="center|start"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:text="기간"
+                            android:textColor="@color/DimGray"
+                            android:textSize="16sp" />
+
+                        <RelativeLayout
+                            android:layout_marginTop="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/bg_edit_text_01"
+                                android:gravity="center|start"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                            <ImageView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginEnd="12dp"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/ic_launcher_background" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_marginBottom="7dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:textSize="18sp"
+                        android:text="~"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:text="교재 파일 등록(PDF)"
+                            android:textColor="@color/DimGray"
+                            android:textSize="16sp" />
+                        <RelativeLayout
+                            android:layout_width="180dp"
+                            android:layout_height="180dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_edit_text_01">
+
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerInParent="true"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/ic_launcher_background" />
+
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_marginTop="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/bg_edit_text_01"
+                                android:gravity="center|start"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                            <ImageView
+                                android:layout_marginEnd="12dp"
+                                android:layout_centerInParent="true"
+                                android:layout_alignParentEnd="true"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/ic_launcher_background"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="악보 읽기 여부"
+                    android:textColor="@color/DimGray"
+                    android:textSize="16sp" />
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioButton"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_radio_button_user_type"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="악보 읽을 줄 몰라도 됩니다."
+                        android:textAlignment="center"
+                        android:textColor="@drawable/selector_radio_text_user_type"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_radio_button_user_type"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="악보 읽을 수 있어야 합니다."
+                        android:textAlignment="center"
+                        android:textColor="@drawable/selector_radio_text_user_type"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </RadioGroup>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="피아노 숙련 요구"
+                    android:textColor="@color/DimGray"
+                    android:textSize="16sp" />
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioButton3"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_radio_button_user_type"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="무관"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/selector_radio_text_user_type"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton5"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_radio_button_user_type"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="1년 이하"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/selector_radio_text_user_type"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                    <RadioButton
+                        android:id="@+id/radioButton6"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_radio_button_user_type"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="2년 이하"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/selector_radio_text_user_type"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                    <RadioButton
+                        android:id="@+id/radioButton7"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_radio_button_user_type"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="3년 이하"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/selector_radio_text_user_type"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                    <RadioButton
+                        android:id="@+id/radioButton8"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_radio_button_user_type"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="5년 이상"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/selector_radio_text_user_type"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </RadioGroup>
+
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/RoyalBlue"
+            android:onClick="@{(view)->viewModel.btnNextClicked(view)}"
+            android:text="다음"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="kr.co.soundleader.android.lesson2n2.ui.mypage.viewmodel.MyPageCurriculumTeacherViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <include
+
+            android:id="@+id/nav_top_menu"
+            layout="@layout/top_menu" />
+
+        <LinearLayout
+                android:orientation="vertical"
+            android:id="@+id/layout_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/nav_top_menu">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_curriculum_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="20dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_mypage_curriculum_teacher_list" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

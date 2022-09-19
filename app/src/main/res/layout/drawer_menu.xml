@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+
+    </data>
+
+<com.google.android.material.navigation.NavigationView
+
+    android:background="@color/drawer_menu_color"
+    android:layout_gravity="start"
+    android:id="@+id/nav_drawer_menu"
+    android:layout_width="300dp"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:padding="10dp"
+            android:gravity="end|center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_height">
+
+            <ImageView
+                android:adjustViewBounds="true"
+                android:id="@+id/iv_nav_menu"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:src="@drawable/ic_launcher_background" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_user_name"
+
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="사운드리더가나다라마바사"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginStart="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="님"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+         />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</com.google.android.material.navigation.NavigationView>
+
+
+</layout>

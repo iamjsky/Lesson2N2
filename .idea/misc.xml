@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/drawable-v24/selector_user_type_bg.xml" value="0.2155" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/drawable/bg_edit_text_01.xml" value="0.1875" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/drawable/bg_my_page_card_01.xml" value="0.1885" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/drawable/bg_my_page_card_02.xml" value="0.2155" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/drawable/bg_my_page_card_03.xml" value="0.1885" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/drawable/bg_ripple_effect_01.xml" value="0.1845" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/drawable/bg_teacher_list_item.xml" value="0.1875" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/drawable/bottom_menu_01_color.xml" value="0.1885" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/drawable/default_btn_user_type.xml" value="0.2155" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1885" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/drawable/ico_plus_01.xml" value="0.1885" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/drawable/selected_btn_user_type.xml" value="0.2155" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/drawable/selector_mypage_curriculm_item.xml" value="0.1875" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/drawable/selector_radio_button_user_type.xml" value="0.2155" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/drawable/selector_radio_button_user_type_err.xml" value="0.1885" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/drawable/selector_radio_text_user_type.xml" value="0.2155" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/drawable/selector_user_type.xml" value="0.2155" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_class_room_student.xml" value="0.16336633663366337" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_class_room_teacher.xml" value="0.14" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_curriculum_add.xml" value="0.16336633663366337" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_curriculum_add_01.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_curriculum_add_02.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_curriculum_detail.xml" value="0.15" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_curriculum_info.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_curriculum_macthing_student.xml" value="0.29157759726378796" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_curriculum_macthing_teacher.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_my_page_curriculum_detail_teacher.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_my_page_curriculum_modify_teacher.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_my_page_curriculum_teacher.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_my_page_modify.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_present.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_recycler_view.xml" value="0.35520833333333335" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_room.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_sel1.xml" value="0.22" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_sel2.xml" value="0.165625" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_sign_in.xml" value="0.22" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_sign_up.xml" value="0.16" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_sign_up_one.xml" value="0.29157759726378796" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_sign_up_student_01.xml" value="0.17579908675799086" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_sign_up_teacher_01.xml" value="0.33" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_sign_up_teacher_02.xml" value="0.2519633507853403" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_sign_up_teacher_one.xml" value="0.14792646430098333" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_sign_up_teacher_two.xml" value="0.33" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_sign_up_two.xml" value="0.22" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_teacher_curriculum_modify.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_teacher_detail.xml" value="0.29157759726378796" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_teacher_info.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/activity_text.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/dialog_alert.xml" value="0.14" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/dialog_find_password.xml" value="0.16" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/dialog_find_password_2.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/dialog_find_password_finish.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/dialog_logout.xml" value="0.18" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/dialog_need_login.xml" value="0.18" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/drawer_menu.xml" value="0.28788518362178134" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_class_room_end_list_student.xml" value="0.29157759726378796" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_class_room_end_list_teacher.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_class_room_list.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_class_room_matching_list_studnet.xml" value="0.29157759726378796" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_class_room_matching_list_teacher.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_class_room_start_list_student.xml" value="0.29157759726378796" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_class_room_start_list_teacher.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_curriculum.xml" value="0.14792646430098333" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_curriculum_add_01.xml" value="0.14" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_curriculum_add_02.xml" value="0.16" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_find_password.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_main_class_room.xml" value="0.29157759726378796" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_main_class_room_end_student.xml" value="0.29157759726378796" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_main_class_room_end_teacher.xml" value="0.29157759726378796" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_main_class_room_matching_studnet.xml" value="0.29157759726378796" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_main_class_room_matching_teacher.xml" value="0.29157759726378796" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_main_class_room_start_student.xml" value="0.29157759726378796" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_main_class_room_start_teacher.xml" value="0.29157759726378796" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_main_curriculum.xml" value="0.12013888888888889" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_main_my_page.xml" value="0.18" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_main_teacher.xml" value="0.29157759726378796" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_my_page.xml" value="0.2" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_my_page_curriculum_modify_teacher_01.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_my_page_curriculum_modify_teacher_02.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_my_page_modifiy_student_01.xml" value="0.29157759726378796" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_my_page_modifiy_teacher_01.xml" value="0.12" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_my_page_modify_student_01.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_my_page_modify_teacher_01.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_my_page_modify_teacher_02.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_present_privacy.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_present_term_of_use.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_sign_up_student_01.xml" value="0.12" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_sign_up_teacher_01.xml" value="0.25" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_sign_up_teacher_02.xml" value="0.2" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_teacher.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/fragment_teacher_list.xml" value="0.13" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/item_chat_bubble_list.xml" value="0.14" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/item_class_room_end_list_teacher.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/item_class_room_matching_list_teacher.xml" value="0.22" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/item_class_room_start_list_teacher.xml" value="0.2" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/item_curriculum.xml" value="0.15" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/item_main_class_room_end_teacher_list.xml" value="0.29157759726378796" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/item_main_class_room_matching_teacher_list.xml" value="0.25" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/item_main_class_room_start_teacher_list.xml" value="0.29157759726378796" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/item_main_curriculum_list.xml" value="0.29157759726378796" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/item_main_teacher_list.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/item_mypage_curriculum_teacher_list.xml" value="0.18" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/item_recycler_view_empty.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/item_recycler_view_header.xml" value="0.1470713980333476" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/item_songlist.xml" value="0.33" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/item_tacher_list.xml" value="0.29157759726378796" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/item_teacher_list.xml" value="0.25" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/menu_bottom.xml" value="0.25" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/menu_nav.xml" value="0.17916666666666667" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/menu_top.xml" value="0.16" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/top_menu.xml" value="0.2472703917790623" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/layout/view_main.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/menu/bottom_menu.xml" value="0.1" />
+        <entry key="..\:/work/dev/project/Lesson2N2/app/src/main/res/menu/drawer_menu.xml" value="0.16" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="kr.co.soundleader.android.lesson2n2.ui.sign.viewmodel.SignInViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:background="@color/default_page_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+
+        <include
+
+            android:id="@+id/nav_top_menu"
+            layout="@layout/top_menu" />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_login"
+            android:layout_below="@+id/nav_top_menu">
+
+            <LinearLayout
+
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_marginEnd="30dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:textColor="@color/DimGray"
+                        android:textSize="16sp"
+                        android:text="회원구분"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"/>
+
+                    <RadioGroup
+                        android:onCheckedChanged="@{viewModel.setUserLoginType}"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <RadioButton
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:padding="8dp"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:id="@+id/rb_type_teacher"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/selector_radio_button_user_type"
+                            android:textColor="@drawable/selector_radio_text_user_type"
+                            android:button="@null"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:text="강사" />
+
+                        <RadioButton
+
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:padding="8dp"
+                            android:layout_weight="1"
+                            android:id="@+id/rb_type_student"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/selector_radio_button_user_type"
+                            android:textColor="@drawable/selector_radio_text_user_type"
+                            android:button="@null"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:text="학생" />
+
+                    </RadioGroup>
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:textColor="@color/DimGray"
+                        android:textSize="16sp"
+                        android:text="이메일 아이디"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"/>
+
+                    <EditText
+                        android:maxLines="1"
+                        android:text="@={viewModel.testText}"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center|start"
+                        android:padding="8dp"
+                        android:textSize="18sp"
+                        android:background="@drawable/bg_edit_text_01"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
+
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:textColor="@color/DimGray"
+                        android:textSize="16sp"
+                        android:text="비밀번호"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"/>
+
+                    <EditText
+                        android:maxLines="1"
+                        android:inputType="textPassword"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center|start"
+                        android:padding="8dp"
+                        android:textSize="18sp"
+                        android:background="@drawable/bg_edit_text_01"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:onClick="@{(view)->viewModel.btnTeacherSignUpClicked(view)}"
+                        android:layout_marginTop="28dp"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:background="@color/RoyalBlue"
+                        android:text="강사 회원가입"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
+                    <Button
+                        android:onClick="@{(view)->viewModel.btnStudentSignUpClicked(view)}"
+                        android:layout_marginTop="48dp"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:background="@color/RoyalBlue"
+                        android:text="학생 회원가입"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
+
+                    <Button
+                        android:id="@+id/btn_find_pw"
+                        android:layout_marginTop="48dp"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:background="@drawable/bg_edit_text_01"
+                        android:text="비밀번호 찾기"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/RoyalBlue"
+            android:onClick="@{(view)->viewModel.btnLoginClicked(view)}"
+            android:text="로그인"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+</layout>

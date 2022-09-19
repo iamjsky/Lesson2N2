@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="kr.co.soundleader.android.lesson2n2.ui.classroom.viewmodel.ClassRoomTeacherViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+
+            android:id="@+id/nav_top_menu"
+            layout="@layout/top_menu" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layout_foot"
+            android:layout_below="@+id/nav_top_menu">
+
+            <LinearLayout
+
+                android:id="@+id/layout_body"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical"
+                android:padding="20dp">
+
+
+                <TextView
+                    android:id="@+id/tv_curriculum_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="40dp"
+                    android:gravity="center"
+                    android:text="바이엘 (초보) 피아노 강습"
+                    android:textSize="20sp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_teacher_profile"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_launcher_background"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_curriculum_request"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:background="@color/orange_900"
+                        android:maxLines="1"
+                        android:padding="6dp"
+                        android:text="커리큘럼 신청"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/iv_teacher_profile"
+                        app:layout_constraintTop_toTopOf="@+id/iv_teacher_profile" />
+
+                    <TextView
+                        android:id="@+id/tv_student_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:maxLines="1"
+                        android:padding="6dp"
+                        android:text="신청자명(학생)"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_curriculum_request"
+
+                        app:layout_constraintTop_toBottomOf="@+id/tv_curriculum_request" />
+
+                    <TextView
+                        android:id="@+id/tv_coast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:padding="6dp"
+                        android:text="레슨 비용"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/tv_student_name"
+                        app:layout_constraintTop_toTopOf="@+id/tv_student_name" />
+
+                    <TextView
+                        android:id="@+id/tv_period"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:maxLines="1"
+                        android:padding="6dp"
+                        android:text="횟수 / 기간"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_coast"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_coast" />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:maxLines="1"
+                        android:padding="6dp"
+                        android:text="시간"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_period"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_period" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="center"
+                        android:text="상태 :"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="매칭중"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/bg_edit_text_01"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="640dp">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_margin="4dp"
+                        android:id="@+id/rv_chat"
+                        android:clipToPadding="false"
+                        android:padding="20dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:orientation="vertical"
+                        tools:listitem="@layout/item_chat_bubble_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                       />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_chat"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edit_text_01"
+                        android:gravity="center|start"
+                        android:hint="내용 입력.."
+                        android:paddingStart="20dp" />
+
+                    <Button
+                        android:id="@+id/btn_send"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@color/RoyalBlue"
+                        android:gravity="center"
+                        android:paddingStart="40dp"
+                        android:paddingEnd="40dp"
+                        android:text="발송"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+        <RelativeLayout
+
+            android:layout_alignParentBottom="true"
+            android:id="@+id/layout_foot"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/layout_matching_step_01"
+
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:background="@color/gray"
+                    android:text="매칭 거절"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"/>
+                <Button
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:background="@color/RoyalBlue"
+                    android:text="매칭 수락"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/layout_matching_step_02"
+
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:background="@color/gray"
+                    android:text="매칭 취소"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"/>
+                <Button
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:background="@color/RoyalBlue"
+                    android:text="레슨(실시간) 생성"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/layout_matching_step_03"
+
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <Button
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:background="@color/RoyalBlue"
+                    android:text="강의 종료"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+</layout>

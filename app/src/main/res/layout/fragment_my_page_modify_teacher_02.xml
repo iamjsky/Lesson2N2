@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="kr.co.soundleader.android.lesson2n2.ui.mypage.viewmodel.MyPageModifyTeacherSharedViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:background="@color/default_page_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_modify_confirm"
+            >
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="상세 이력"
+                    android:textColor="@color/DimGray"
+                    android:textSize="16sp" />
+
+
+                <EditText
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:lineSpacingExtra="2dp"
+                    android:hint="# 학력 : \n# 경력 : \n# 분야 : 피아노\n# 소개 : 안녕하세요."
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text_01"
+                    android:gravity="top|start"
+                    android:padding="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <Button
+            android:onClick="@{(view)->viewModel.btnModifyConfirmClicked(view)}"
+            android:id="@+id/btn_modify_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/RoyalBlue"
+            android:text="수정하기"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+</layout>
