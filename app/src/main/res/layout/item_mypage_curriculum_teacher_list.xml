@@ -32,6 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <ToggleButton
+                    android:id="@+id/tbtn_hide"
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_marginEnd="10dp"
                     android:textColor="@color/white"
@@ -39,7 +40,6 @@
                     android:gravity="center"
                     android:textOff="숨김"
                     android:textOn="노출"
-                    android:checked="true"
                     app:showText="true"
                     android:textAllCaps="false"
                     android:background="@drawable/selector_mypage_curriculm_item"

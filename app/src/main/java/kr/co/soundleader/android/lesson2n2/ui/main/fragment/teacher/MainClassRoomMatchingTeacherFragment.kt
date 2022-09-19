@@ -9,15 +9,18 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kr.co.soundleader.android.lesson2n2.R
 import kr.co.soundleader.android.lesson2n2.databinding.FragmentMainClassRoomMatchingTeacherBinding
+import kr.co.soundleader.android.lesson2n2.di.repository.UserRepository
 
 import kr.co.soundleader.android.lesson2n2.ui.base.BaseFragment
 import kr.co.soundleader.android.lesson2n2.ui.main.adapter.MainClassRoomMatchingTeacherListAdapter
 import kr.co.soundleader.android.lesson2n2.ui.main.viewmodel.MainClassRoomTeacherSharedViewModel
+import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainClassRoomMatchingTeacherFragment : BaseFragment<FragmentMainClassRoomMatchingTeacherBinding, MainClassRoomTeacherSharedViewModel>() {
     override val viewModel: MainClassRoomTeacherSharedViewModel by sharedViewModel()
+    val userRepo : UserRepository by inject()
 
     lateinit var mainClassRoomMatchingTeacherListAdapter: MainClassRoomMatchingTeacherListAdapter
 
@@ -42,7 +45,7 @@ class MainClassRoomMatchingTeacherFragment : BaseFragment<FragmentMainClassRoomM
         super.onViewCreated(view, savedInstanceState)
         binding.viewModel = viewModel
 
-        mainClassRoomMatchingTeacherListAdapter = MainClassRoomMatchingTeacherListAdapter(context)
+        mainClassRoomMatchingTeacherListAdapter = MainClassRoomMatchingTeacherListAdapter(context, userRepo)
         mainClassRoomMatchingTeacherListAdapter.setHeaderVisible(false)
         binding.rvMatchingListTeacher.layoutManager = LinearLayoutManager(context)
         binding.rvMatchingListTeacher.setHasFixedSize(true)

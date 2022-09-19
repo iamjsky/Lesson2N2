@@ -30,9 +30,47 @@
                 android:orientation="vertical"
                 android:padding="20dp">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="학력"
+                    android:textColor="@color/DimGray"
+                    android:textSize="16sp" />
 
+                <EditText
+                    android:hint="OO대학교 OO학과 / 졸업, 교수"
+                    android:maxLines="1"
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text_01"
+                    android:gravity="center|start"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
 
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="레슨 경력"
+                    android:textColor="@color/DimGray"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:hint="ex:) 5년"
+                    android:maxLines="1"
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text_01"
+                    android:gravity="center|start"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_marginTop="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
                     android:text="상세 이력"
@@ -44,15 +82,71 @@
                     android:scrollbarStyle="insideInset"
                     android:scrollbars="vertical"
                     android:lineSpacingExtra="2dp"
-                    android:hint="# 학력 : \n# 경력 : \n# 분야 : 피아노\n# 소개 : 안녕하세요."
+                    android:hint="# 분야 : 피아노\n# 수상 이력 : \n# 소개 : 안녕하세요."
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="400dp"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/bg_edit_text_01"
                     android:gravity="top|start"
                     android:padding="20dp"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
+
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="소개 이미지 등록"
+                    android:textColor="@color/DimGray"
+                    android:textSize="16sp" />
+
+                <!--                <RelativeLayout-->
+                <!--                    android:layout_marginTop="8dp"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="50dp">-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="50dp"-->
+                <!--                        android:background="@drawable/bg_edit_text_01"-->
+                <!--                        android:gravity="center|start"-->
+                <!--                        android:padding="8dp"-->
+                <!--                        android:textColor="@color/black"-->
+                <!--                        android:textSize="18sp" />-->
+
+
+
+
+                <!--                    <ImageView-->
+                <!--                        android:layout_width="28dp"-->
+                <!--                        android:layout_height="28dp"-->
+                <!--                        android:layout_alignParentEnd="true"-->
+                <!--                        android:layout_centerInParent="true"-->
+                <!--                        android:layout_marginEnd="12dp"-->
+                <!--                        android:adjustViewBounds="true"-->
+                <!--                        android:src="@drawable/ic_launcher_background" />-->
+                <!--                </RelativeLayout>-->
+
+                <RelativeLayout
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_edit_text_01"
+                    android:padding="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+
+                        android:adjustViewBounds="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp"/>
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="12dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_launcher_background" />
+                </RelativeLayout>
 
                 <LinearLayout
                     android:layout_marginTop="20dp"

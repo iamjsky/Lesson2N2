@@ -10,9 +10,15 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kr.co.soundleader.android.lesson2n2.data.model.api.ArticleList
 import kr.co.soundleader.android.lesson2n2.R
+import kr.co.soundleader.android.lesson2n2.data.model.user.UserInfo
+import kr.co.soundleader.android.lesson2n2.data.model.user.UserType
+import kr.co.soundleader.android.lesson2n2.di.repository.UserRepository
+import kr.co.soundleader.android.lesson2n2.ui.classroom.activity.ClassRoomStudentActivity
 import kr.co.soundleader.android.lesson2n2.ui.classroom.activity.ClassRoomTeacherActivity
+import org.koin.android.ext.android.inject
+import org.koin.androidx.compose.inject
 
-class MainClassRoomMatchingTeacherListAdapter(private val context: Context) :
+class MainClassRoomMatchingTeacherListAdapter(private val context: Context, private val userRepo : UserRepository) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private val HEADER = 0 // 헤더 뷰
@@ -123,8 +129,13 @@ class MainClassRoomMatchingTeacherListAdapter(private val context: Context) :
             fun bind(item: ArticleList) {
 
                 layout_item.setOnClickListener {
+                    var intent:Intent
+                    if(userRepo.userLoginType == UserType.TEACHER){
+                        intent = Intent(context, ClassRoomTeacherActivity::class.java)
+                    }else{
+                        intent = Intent(context, ClassRoomStudentActivity::class.java)
+                    }
 
-                    val intent = Intent(context, ClassRoomTeacherActivity::class.java)
                     context.startActivity(intent)
 
 

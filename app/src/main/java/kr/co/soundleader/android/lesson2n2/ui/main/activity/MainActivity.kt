@@ -5,13 +5,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.Observer
-import androidx.lifecycle.lifecycleScope
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
@@ -19,16 +19,13 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
-import kr.co.soundleader.android.lesson2n2.MyApplication
 import kr.co.soundleader.android.lesson2n2.R
 import kr.co.soundleader.android.lesson2n2.data.Constants
 import kr.co.soundleader.android.lesson2n2.data.Constants.Companion.MENU_01_TITLE
 import kr.co.soundleader.android.lesson2n2.data.Constants.Companion.MENU_02_TITLE
 import kr.co.soundleader.android.lesson2n2.data.Constants.Companion.MENU_03_TITLE
 import kr.co.soundleader.android.lesson2n2.data.Constants.Companion.MENU_04_TITLE
-import kr.co.soundleader.android.lesson2n2.data.model.user.UserType
 import kr.co.soundleader.android.lesson2n2.databinding.ActivityMainBinding
-import kr.co.soundleader.android.lesson2n2.di.repository.DataRepository
 import kr.co.soundleader.android.lesson2n2.di.repository.UserRepository
 import kr.co.soundleader.android.lesson2n2.ui.base.BaseActivity
 import kr.co.soundleader.android.lesson2n2.ui.main.fragment.MainClassRoomFragment
@@ -122,10 +119,10 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
 
     override fun setTopMenu(){
         //TEST
-        binding.navTopMenu.layoutTopMenuBody.setOnClickListener {
-            val intent = Intent(this, SignInActivity::class.java)
-            startActivity(intent)
-        }
+//        binding.navTopMenu.layoutTopMenuBody.setOnClickListener {
+//            val intent = Intent(this, SignInActivity::class.java)
+//            startActivity(intent)
+//        }
 
         binding.navTopMenu.ivNavMenu.setOnClickListener {
 
@@ -153,7 +150,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
                     binding.navBottomMenu.itemTextColor =
                         ContextCompat.getColorStateList(this, R.color.color_bottom_menu_01)
                     fragmentTag = MENU_01_TITLE
-                    fragment = MainTeacherFragment()
+                    fragment = MainCurriculumFragment()
 
 
                 }
@@ -165,7 +162,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
                     binding.navBottomMenu.itemTextColor =
                         ContextCompat.getColorStateList(this, R.color.color_bottom_menu_02)
                     fragmentTag = MENU_02_TITLE
-                    fragment = MainCurriculumFragment()
+                    fragment = MainTeacherFragment()
                 }
                 R.id.menu_03 -> {
 
@@ -208,12 +205,33 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
     }
 
 
+    private var backKeyPressadTime: Long = 0
+
 
     override fun onBackPressed() {
         if (binding.layoutNavDrawer.isDrawerOpen(GravityCompat.START)) {
             binding.layoutNavDrawer.closeDrawer(GravityCompat.START)
         } else {
-            super.onBackPressed()
+
+            when(binding.navBottomMenu.selectedItemId){
+                R.id.menu_01->{
+                    Log.d(TAG, "binding.navBottomMenu.selectedItemId : " + binding.navBottomMenu.selectedItemId)
+                    if(System.currentTimeMillis() - backKeyPressadTime >= 2000){
+                        backKeyPressadTime = System.currentTimeMillis()
+                        Toast.makeText(this, "뒤로 버튼을 한 번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT).show()
+                        return
+                    }else {
+                        Log.d(TAG, "finish()")
+                        finishAffinity()
+
+                    }
+                }else->{
+                    super.onBackPressed()
+                }
+            }
+
+
+
         }
 
     }
@@ -238,11 +256,11 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
 
         // Hide all Fragment
         if (menu_01 != null) {
-            (menu_01 as MainTeacherFragment).binding.rvTeacherList.suppressLayout(true)
+            (menu_01 as MainCurriculumFragment).binding.rvCurriculumList.suppressLayout(true)
             ft.hide(menu_01)
         }
         if (menu_02 != null) {
-            (menu_02 as MainCurriculumFragment).binding.rvCurriculumList.suppressLayout(true)
+            (menu_02 as MainTeacherFragment).binding.rvTeacherList.suppressLayout(true)
             ft.hide(menu_02)
         }
         if (menu_03 != null) {
@@ -257,7 +275,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
             if (menu_01 != null) {
                 binding.navTopMenu.tvTopMenuTitle.visibility = View.INVISIBLE
                 binding.navTopMenu.ivTopMenuLogo.visibility = View.VISIBLE
-                val mFragment: MainTeacherFragment = (menu_01 as MainTeacherFragment)
+                val mFragment: MainCurriculumFragment = (menu_01 as MainCurriculumFragment)
                 if(mFragment.scrollPosY > mFragment.scrollPosYLimit){
                     binding.navTopMenu.ivTopMenuLogo.visibility = View.INVISIBLE
                     binding.navTopMenu.tvTopMenuTitle.visibility = View.VISIBLE
@@ -272,7 +290,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
             if (menu_02 != null) {
                 binding.navTopMenu.tvTopMenuTitle.visibility = View.INVISIBLE
                 binding.navTopMenu.ivTopMenuLogo.visibility = View.VISIBLE
-                val mFragment: MainCurriculumFragment = (menu_02 as MainCurriculumFragment)
+                val mFragment: MainTeacherFragment = (menu_02 as MainTeacherFragment)
                 if(mFragment.scrollPosY > mFragment.scrollPosYLimit){
                     binding.navTopMenu.ivTopMenuLogo.visibility = View.INVISIBLE
                     binding.navTopMenu.tvTopMenuTitle.visibility = View.VISIBLE

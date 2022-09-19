@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentTransaction
 import kr.co.soundleader.android.lesson2n2.R
 import kr.co.soundleader.android.lesson2n2.data.Constants
 import kr.co.soundleader.android.lesson2n2.data.Constants.Companion.FRAGMENT_CURRICULUM_ADD_01_TITLE
+import kr.co.soundleader.android.lesson2n2.data.Constants.Companion.FRAGMENT_CURRICULUM_ADD_02
 import kr.co.soundleader.android.lesson2n2.data.Constants.Companion.FRAGMENT_CURRICULUM_ADD_02_TITLE
 import kr.co.soundleader.android.lesson2n2.databinding.ActivityCurriculumAddBinding
 import kr.co.soundleader.android.lesson2n2.di.repository.DataRepository
@@ -16,6 +17,7 @@ import kr.co.soundleader.android.lesson2n2.ui.base.BaseActivity
 import kr.co.soundleader.android.lesson2n2.ui.curriculum.fragment.CurriculumAdd01Fragment
 import kr.co.soundleader.android.lesson2n2.ui.curriculum.fragment.CurriculumAdd02Fragment
 import kr.co.soundleader.android.lesson2n2.ui.curriculum.viewmodel.CurriculumAddViewModel
+import kr.co.soundleader.android.lesson2n2.ui.main.fragment.MainMyPageFragment
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -134,6 +136,17 @@ class CurriculumAddActivity : BaseActivity<ActivityCurriculumAddBinding, Curricu
                 super.onBackPressed()
             }
             Constants.FRAGMENT_CURRICULUM_ADD_02 ->{
+                val fm: FragmentManager = supportFragmentManager
+                val fragment_02 = fm.findFragmentByTag(FRAGMENT_CURRICULUM_ADD_02)
+
+
+                if (fragment_02 != null) {
+                    val mFragment: CurriculumAdd02Fragment = (fragment_02 as CurriculumAdd02Fragment)
+                    mFragment.youTubePlayer.pause()
+
+
+
+                }
                 setFragmentPage(Constants.FRAGMENT_CURRICULUM_ADD_01)
             }
 

@@ -15,15 +15,13 @@
         android:background="@color/default_page_color"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-   >
-
+        >
 
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@+id/btn_confirm"
-            >
+            android:layout_above="@+id/btn_confirm">
 
             <LinearLayout
 
@@ -32,6 +30,7 @@
                 android:orientation="vertical"
 
                 android:padding="20dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
@@ -40,64 +39,90 @@
                     android:textSize="16sp" />
 
                 <EditText
-                    android:scrollbarStyle="insideInset"
-                    android:scrollbars="vertical"
-                    android:lineSpacingExtra="2dp"
-                    android:text="바이엘 상\n피아노를 처음 접하는 학생을 대상으로, 음악의 기본적 개념을 이해하고 오른손/왼손 독보가 가능하도록 한다.\n\n바이엘 하\n박자, 악상, 기초 코드 등을 재밌는 곡들을 통해 배움으로써 다음 단계를 예비한다."
                     android:layout_width="match_parent"
                     android:layout_height="400dp"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/bg_edit_text_01"
                     android:gravity="top|start"
+                    android:lineSpacingExtra="2dp"
                     android:padding="20dp"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:text="바이엘 상\n피아노를 처음 접하는 학생을 대상으로, 음악의 기본적 개념을 이해하고 오른손/왼손 독보가 가능하도록 한다.\n\n바이엘 하\n박자, 악상, 기초 코드 등을 재밌는 곡들을 통해 배움으로써 다음 단계를 예비한다."
                     android:textColor="@color/black"
                     android:textSize="18sp" />
 
                 <TextView
-                    android:layout_marginTop="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
+                    android:layout_marginTop="20dp"
                     android:text="상세 이미지 등록"
                     android:textColor="@color/DimGray"
                     android:textSize="16sp" />
 
-                <RelativeLayout
-                    android:layout_marginTop="8dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp">
+                <!--                <RelativeLayout-->
+                <!--                    android:layout_marginTop="8dp"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="50dp">-->
 
-                    <TextView
+                <!--                    <TextView-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="50dp"-->
+                <!--                        android:background="@drawable/bg_edit_text_01"-->
+                <!--                        android:gravity="center|start"-->
+                <!--                        android:padding="8dp"-->
+                <!--                        android:textColor="@color/black"-->
+                <!--                        android:textSize="18sp" />-->
+
+
+                <!--                    <ImageView-->
+                <!--                        android:layout_width="28dp"-->
+                <!--                        android:layout_height="28dp"-->
+                <!--                        android:layout_alignParentEnd="true"-->
+                <!--                        android:layout_centerInParent="true"-->
+                <!--                        android:layout_marginEnd="12dp"-->
+                <!--                        android:adjustViewBounds="true"-->
+                <!--                        android:src="@drawable/ic_launcher_background" />-->
+                <!--                </RelativeLayout>-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_edit_text_01"
+                    android:padding="1dp">
+
+                    <ImageView
+
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:background="@drawable/bg_edit_text_01"
-                        android:gravity="center|start"
-                        android:padding="8dp"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
+                        android:layout_height="400dp"
+                        android:adjustViewBounds="true" />
 
                     <ImageView
                         android:layout_width="28dp"
                         android:layout_height="28dp"
-                        android:layout_alignParentEnd="true"
                         android:layout_centerInParent="true"
                         android:layout_marginEnd="12dp"
                         android:adjustViewBounds="true"
                         android:src="@drawable/ic_launcher_background" />
                 </RelativeLayout>
+
+
                 <TextView
-                    android:layout_marginTop="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
+                    android:layout_marginTop="20dp"
                     android:text="강의 샘플 / 소개 영상 YouTube 링크 주소"
                     android:textColor="@color/DimGray"
                     android:textSize="16sp" />
 
                 <RelativeLayout
-                    android:layout_marginTop="8dp"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp">
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp">
 
                     <EditText
+                        android:id="@+id/edtxt_youtube_url"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:background="@drawable/bg_edit_text_01"
@@ -107,6 +132,8 @@
                         android:paddingTop="8dp"
                         android:paddingEnd="8dp"
                         android:paddingBottom="8dp"
+                        android:selectAllOnFocus="true"
+                        android:text="@={viewModel.youTubeUrl}"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
 
@@ -121,6 +148,15 @@
 
                 </RelativeLayout>
 
+                <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                    android:id="@+id/player_youtube"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+
+                    app:autoPlay="false" />
+
+
             </LinearLayout>
 
 
@@ -133,7 +169,7 @@
             android:layout_height="60dp"
             android:layout_alignParentBottom="true"
             android:background="@color/RoyalBlue"
-            android:text="커리큘럼 등록"
+            android:text="커리큘럼 수정"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />

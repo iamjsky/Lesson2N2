@@ -127,7 +127,7 @@
                         android:paddingTop="10dp"
                         android:paddingEnd="30dp"
                         android:paddingBottom="10dp"
-                        android:text="강사 정보"
+                        android:text="강사 상세정보"
                         android:textColor="@color/white"
                         android:textSize="18sp" />
 

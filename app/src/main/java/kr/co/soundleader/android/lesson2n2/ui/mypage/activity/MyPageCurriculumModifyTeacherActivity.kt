@@ -27,6 +27,8 @@ class MyPageCurriculumModifyTeacherActivity : BaseActivity<ActivityMyPageCurricu
         return R.layout.activity_my_page_curriculum_modify_teacher
     }
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding.viewModel = viewModel

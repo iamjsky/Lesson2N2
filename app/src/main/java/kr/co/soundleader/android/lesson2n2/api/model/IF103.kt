@@ -26,6 +26,7 @@ data class ArticleList (
     @SerializedName("title"      ) var title     : String? = null,
     @SerializedName("genre_name" ) var genreName : String? = null,
     @SerializedName("artist"     ) var artist    : String? = null,
-    @SerializedName("cover_img"  ) var coverImg  : String? = null
+    @SerializedName("cover_img"  ) var coverImg  : String? = null,
+    @SerializedName("isCheck"  ) var isCheck  : Boolean? = false
 
 )

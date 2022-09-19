@@ -91,6 +91,9 @@ class MainCurriculumListAdapter(private val context: Context) :
 
         notifyDataSetChanged()
     }
+
+
+
     // 헤더 부분에 해당하는 뷰객체 가지는 뷰홀더
    inner class HeaderViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val layout_header: LinearLayout = itemView.findViewById(R.id.layout_header)

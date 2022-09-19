@@ -6,8 +6,8 @@ interface Constants {
         const val TAG: String = "SL_DEBUG"
         const val REMON_PERMISSION_REQUEST = 0x0101
 
-        const val MENU_01_TITLE: String = "강사리스트"
-        const val MENU_02_TITLE: String = "커리큘럼"
+        const val MENU_01_TITLE: String = "커리큘럼"
+        const val MENU_02_TITLE: String = "강사리스트"
         const val MENU_03_TITLE: String = "강의실"
         const val MENU_04_TITLE: String = "마이페이지"
 

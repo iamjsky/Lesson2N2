@@ -5,13 +5,13 @@
         android:id="@+id/menu_01"
         android:enabled="true"
         android:icon="@drawable/ic_launcher_background"
-        android:title="강사리스트"
+        android:title="커리큘럼"
         app:showAsAction="always" />
     <item
         android:id="@+id/menu_02"
         android:enabled="true"
         android:icon="@drawable/ic_launcher_background"
-        android:title="커리큘럼"
+        android:title="강사리스트"
         app:showAsAction="always" />
     <item
         android:id="@+id/menu_03"

@@ -2,14 +2,19 @@ package kr.co.soundleader.android.lesson2n2.ui.mypage.adapter
 
 import android.content.Context
 import android.content.Intent
+import android.util.Log
+import android.util.SparseBooleanArray
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.ToggleButton
 import androidx.recyclerview.widget.RecyclerView
 import kr.co.soundleader.android.lesson2n2.data.model.api.ArticleList
 import kr.co.soundleader.android.lesson2n2.R
+import kr.co.soundleader.android.lesson2n2.data.Constants.Companion.TAG
 import kr.co.soundleader.android.lesson2n2.di.repository.DataRepository
 import kr.co.soundleader.android.lesson2n2.ui.curriculum.activity.CurriculumDetailActivity
 import kr.co.soundleader.android.lesson2n2.ui.mypage.activity.MyPageCurriculumDetailTeacherActivity
@@ -22,6 +27,8 @@ class MyPageCurriculumTeacherListAdapter(private val context: Context) :
     private val HEADER = 0 // 헤더 뷰
     private val ITEM = 1 // 리사이클러 아이템 뷰
     private val EMPTY = 2 // 데이터가 없을 때 뜨는 뷰
+
+    private val hideItemStatus = SparseBooleanArray()
 
 
      var datas = ArrayList<ArticleList>()
@@ -118,6 +125,7 @@ class MyPageCurriculumTeacherListAdapter(private val context: Context) :
     // 항목에 해당하는 뷰객체 가지는 뷰홀더
         inner class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val layout_item: LinearLayout = itemView.findViewById(R.id.layout_item)
+        private val tbtn_hide: ToggleButton = itemView.findViewById(R.id.tbtn_hide)
 
 
 
@@ -129,6 +137,22 @@ class MyPageCurriculumTeacherListAdapter(private val context: Context) :
 
 
             fun bind(item: ArticleList) {
+
+                Log.e(TAG, "position :: " + adapterPosition + "///1111item.isCheck : " + item.isCheck + "/// tbtn_hide.isChecked : " + tbtn_hide.isChecked)
+                tbtn_hide.isChecked = item.isCheck!!
+                Log.e(TAG, "position :: " + adapterPosition + "///2222item.isCheck : " + item.isCheck + "/// tbtn_hide.isChecked : " + tbtn_hide.isChecked)
+                tbtn_hide.setOnClickListener{
+                    item.isCheck = tbtn_hide.isChecked
+                    Log.e(TAG, "position :: " + adapterPosition + "///3333item.isCheck : " + item.isCheck + "/// tbtn_hide.isChecked : " + tbtn_hide.isChecked)
+                    notifyItemChanged(adapterPosition)
+                    Log.e(TAG, "position :: " + adapterPosition + "///4444item.isCheck : " + item.isCheck + "/// tbtn_hide.isChecked : " + tbtn_hide.isChecked)
+                }
+
+//                btn_hide.setOnClickListener {
+//                    btn_hide.setBackgroundResource(R.color.gray)
+//                    notifyItemChanged(adapterPosition)
+//
+//                }
 
                 layout_item.setOnClickListener {
                     val pos: Int = adapterPosition

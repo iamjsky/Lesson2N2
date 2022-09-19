@@ -28,6 +28,7 @@
             android:layout_below="@+id/nav_top_menu">
 
             <androidx.recyclerview.widget.RecyclerView
+
                 android:id="@+id/rv_curriculum_list"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
